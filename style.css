@@ -47,10 +47,11 @@ article::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("top-image.png") no-repeat;
+  background: linear-gradient(rgba(1, 1, 1, 0.2), rgba(255, 255, 255, 0)),
+    url("top-image.png") no-repeat;
   width: 100%;
   height: 142px;
-  border-top: 1mm solid #ccc;
+  border-top: 1mm solid #ff0100;
 }
 
 article::after {
@@ -58,9 +59,16 @@ article::after {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  background: url("bottom-image.png") no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(1, 1, 1, 0.2)),
+    url("bottom-image.png") no-repeat;
   width: 100%;
   /* height: 100%; */
   height: 142px;
-  border-bottom: 1mm solid #ccc;
+  border-bottom: 1mm solid #ff0100;
+}
+
+article h1 {
+  background: url("logo.png") no-repeat;
+  position: absolute;
+  filter: drop-shadow(3px 3px 1px rgba(1, 1, 1, 0.8));
 }
