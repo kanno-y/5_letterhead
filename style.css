@@ -16,6 +16,7 @@ article {
   height: 297mm;
   margin: 20px auto;
   position: relative;
+  background-color: #fff;
 }
 
 address {
@@ -39,3 +40,27 @@ h1 {
 }
 
 /* Your CSS below here */
+
+article::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("top-image.png") no-repeat;
+  width: 100%;
+  height: 142px;
+  border-top: 1mm solid #ccc;
+}
+
+article::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  background: url("bottom-image.png") no-repeat;
+  width: 100%;
+  /* height: 100%; */
+  height: 142px;
+  border-bottom: 1mm solid #ccc;
+}
